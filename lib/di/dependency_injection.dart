@@ -23,9 +23,14 @@ class DependencyInjection implements InitializationAdapter {
     if (isTesting) {
       appHttpApiClient = AppHttpApiClientMock();
     } else {
+      // in this part we can also configure our env file to get this api base url endpoint
       appHttpApiClient =
           AppHttpApiClientImpl(endPoint: "https://api.medium.com/v1/me");
     }
+
+    getIt.registerLazySingleton<AppHttpApiClient>(
+      () => appHttpApiClient,
+    );
   }
 
   Future<void> _configureViewModels({bool isTesting = false}) async {
