@@ -35,16 +35,19 @@ dependencies:
   #Network System
   network:
     path: ./packages/network
-
+  dio: ^4.0.6
 
   #List and map filteration manipulators
   collection: ^1.16.0
+
+  #navigator
   go_router: ^5.2.2
 
 
   #Testing 
 
-
+ #logger
+  logger: ^1.1.0
 
 dev_dependencies:
   flutter_test:

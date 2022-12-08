@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hilmi_berkay_ozdemir/di/dependency_injection.dart';
 import 'package:hilmi_berkay_ozdemir/di/init_adapter.dart';
+import 'package:hilmi_berkay_ozdemir/routes/routes.dart';
 import 'package:network/network.dart';
 
 void main({bool isTesting = true}) async {
@@ -27,9 +28,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       title: 'Hilmi Berkay Özdemir',
-      home: Text('Flutter Demo Home Page'),
+      routerConfig: router,
     );
   }
 }
