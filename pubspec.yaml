@@ -33,6 +33,8 @@ dependencies:
 
 
   #Network System
+  network:
+    path: ./packages/network
 
 
   #List and map filteration manipulators
