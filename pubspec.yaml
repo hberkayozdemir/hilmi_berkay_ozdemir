@@ -39,6 +39,7 @@ dependencies:
 
   #List and map filteration manipulators
   collection: ^1.16.0
+  go_router: ^5.2.2
 
 
   #Testing 
