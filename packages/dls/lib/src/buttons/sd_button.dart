@@ -16,6 +16,7 @@ class ScrollDownButton extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle1?.copyWith(
                   fontSize: 12,
                   letterSpacing: 1.7,
+                  color: AppColorTheme.secondary,
                 ),
           ),
         ),
@@ -23,6 +24,7 @@ class ScrollDownButton extends StatelessWidget {
         Image.asset(
           IconPaths.scrollDown,
           height: 24,
+          color: AppColorTheme.secondary,
           package: DlsConstants.dlsPackageName,
         ),
       ],

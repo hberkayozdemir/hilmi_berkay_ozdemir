@@ -79,6 +79,10 @@ class _HomeViewHeaderState extends State<HomeViewHeader>
       color: AppColorTheme.primary,
       child: Stack(
         children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 30.0, top: 10),
+            child: AppLogo(),
+          ),
           ResponsiveBuilder(builder: (context, sizingInformation) {
             double screenWidth = sizingInformation.screenSize.width;
             if (screenWidth < const RefinedBreakpoints().tabletNormal) {
@@ -86,7 +90,6 @@ class _HomeViewHeaderState extends State<HomeViewHeader>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const AppLogo(),
                   Container(
                     padding: padding,
                     child: Image.asset(
@@ -194,6 +197,7 @@ class _AboutDevState extends State<AboutDev> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SpaceH96(),
         Container(
           margin: margin,
           child: Text(
