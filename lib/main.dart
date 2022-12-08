@@ -1,7 +1,25 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-void main() {
-  runApp(const MyApp());
+import 'package:flutter/material.dart';
+import 'package:hilmi_berkay_ozdemir/di/dependency_injection.dart';
+import 'package:hilmi_berkay_ozdemir/di/init_adapter.dart';
+import 'package:network/network.dart';
+
+void main({bool isTesting = true}) async {
+  await runZonedGuarded<Future<void>>(() async {
+    final features = <InitializationAdapter>[
+      DependencyInjection.shared,
+    ];
+    // this is the app configurations this is launch button of application
+    for (final feature in features) {
+      await feature.initialize();
+      NetworkLogger.log.d('${feature.runtimeType} initialized');
+    }
+    runApp(const MyApp());
+    
+  }, (error, stack) {
+    NetworkLogger.log.e(error, stack);
+  });
 }
 
 class MyApp extends StatelessWidget {
