@@ -1,0 +1,47 @@
+name: dls
+description: A new Flutter package for all UI Components in super application
+version: 0.0.1
+
+
+environment:
+  sdk: '>=2.18.5 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_feather_icons: ^2.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  layout: ^1.0.3
+  responsive_builder: ^0.4.3
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  assets:
+    - assets/icons/
+
+  fonts:
+    - family: VisueltPro
+      fonts:
+        - asset: assets/fonts/visuelt/VisueltPro-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/visuelt/VisueltPro-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/visuelt/VisueltPro-Light.ttf
+          weight: 300
+        - asset: assets/fonts/visuelt/VisueltPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/visuelt/VisueltPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/visuelt/VisueltPro-Black.ttf
+          weight: 700
+        - asset: assets/fonts/visuelt/VisueltPro-Bold.ttf
+          weight: 800
