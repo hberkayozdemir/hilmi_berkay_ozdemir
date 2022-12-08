@@ -16,6 +16,7 @@ void main({bool isTesting = true}) async {
       await feature.initialize();
       NetworkLogger.log.d('${feature.runtimeType} initialized');
     }
+    WidgetsFlutterBinding.ensureInitialized();
     runApp(const MyApp());
   }, (error, stack) {
     NetworkLogger.log.e(error, stack);
