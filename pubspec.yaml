@@ -28,7 +28,8 @@ dependencies:
   provider: ^6.0.4  
   
   #Design Language System
-
+  dls:
+    path: ./packages/dls
 
 
   #Network System
@@ -39,7 +40,7 @@ dependencies:
 
 
   #Testing 
-  
+
 
 
 dev_dependencies:
